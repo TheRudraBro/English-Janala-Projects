@@ -100,19 +100,64 @@
   </div>
 </section> -->
     <!-- Banner Section End -->
-<section class=" ">
-<h2 class="text-4xl font-bold mb-8 text-center">
-<span class="text-sky-400">Let's</span> Learn Vocabularies
-</h2>
-<div id="level-container">
+    <!-- Features Section Start -->
+     <section>
+      <h2 class="text-4xl font-bold mb-8 text-center">
+        <Span class="text-sky-400">Let's</Span> Learn Vocabularies</h2>
 
+        <div id="level-container" class="flex items-center justify-center gap-5 flex-wrap"></div>
+     </section>
+    <!-- Features Section End -->
+
+
+    <section id="word-container" class="bg-gray-100 p-10 w-11/12 mx-auto my-10 grid grid-cols-3 gap-5">
+      <!-- word cards will be appended here -->
+       <div class="text-center col-span-full py-10 space-y-6">
+        <p class="font-bangla text-base font-medium text-gray-400">আপনি এখনো কোন Lesson Select করেন নি</p>
+        <h2 class="font-bangla text-3xl font-bold">একটি Lesson Select করুন।</h2>
+       </div>
+    </section>
+
+
+<!-- Open the modal using ID.showModal() method -->
+<!-- <button class="btn" onclick="my_modal_5.showModal()">open modal</button> -->
+<dialog id="word_modal" class="modal modal-bottom sm:modal-middle">
+  <div class="modal-box">
+  <div id="details-container " class="space-y-6">
+
+<div class="">
+<h2 class="text-2xl font-bold">Eager ( <i class="fa-solid fa-microphone-lines"></i>    :ইগার)</h2>
 </div>
 
-</section>
+<div class="">
+<h2 class="font-bold">Meaning</h2>
+<p class="font-bangla">আগ্রহী</p>
+</div>
 
 
+<div class="">
+<h2 class="font-bold">Example</h2>
+<p class="">Lorem ipsum dolor sit amet.</p>
+</div>
 
 
+<div class="">
+<h2 class="font-bold">Synonyms</h2>
+<span class="btn">Synonyms - 1</span>
+<span class="btn">Synonyms - 1</span>
+<span class="btn">Synonyms - 1</span>
+</div>
+
+
+  </div>
+    <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn">Close</button>
+      </form>
+      </div>
+  </div>
+</dialog>
 
 
 
