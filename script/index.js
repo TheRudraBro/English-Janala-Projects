@@ -23,6 +23,25 @@ const loadLevelWord=(id)=>{
       
     });
 }
+// {
+//     "word": "Friend",
+//     "meaning": "বন্ধু",
+//     "pronunciation": "ফ্রেন্ড",
+//     "level": 2,
+//     "sentence": "She is my best friend.",
+//     "points": 2,
+//     "partsOfSpeech": "noun",
+//     "synonyms": [
+//         "companion",
+//         "buddy",
+//         "pal"
+//     ],
+//     "id": 96
+// }
+
+
+
+
 
 const LoadWordDetail=async(id)=>{
     const url=`
@@ -38,26 +57,26 @@ const detailsBox = document.getElementById('details-container');
 detailsBox.innerHTML=`
 
 <div class="">
-<h2 class="text-2xl font-bold">Eager ( <i class="fa-solid fa-microphone-lines"></i>    :ইগার)</h2>
+<h2 class="text-2xl font-bold">${word.word} ( <i class="fa-solid fa-microphone-lines"></i>    : ${word.pronunciation})</h2>
 </div>
 
 <div class="">
 <h2 class="font-bold">Meaning</h2>
-<p class="font-bangla">আগ্রহী</p>
+<p class="font-bangla">${word.meaning}</p>
 </div>
 
 
 <div class="">
 <h2 class="font-bold">Example</h2>
-<p class="">Lorem ipsum dolor sit amet.</p>
+<p class="">${word.sentence}</p>
 </div>
 
 
 <div class="">
 <h2 class="font-bold">Synonyms</h2>
-<span class="btn">Synonyms - 1</span>
-<span class="btn">Synonyms - 1</span>
-<span class="btn">Synonyms - 1</span>
+<span class="btn">${word.synonyms[0]}</span>
+<span class="btn">${word.synonyms[1]}</span>
+<span class="btn">${word.synonyms[2]}</span>
 </div>
 
 
