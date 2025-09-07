@@ -35,9 +35,33 @@ const LoadWordDetail=async(id)=>{
 const displayWordDetails=(word)=>{
 console.log(word);
 const detailsBox = document.getElementById('details-container');
-// detailsBox.innerHTML=`
+detailsBox.innerHTML=`
 
-// `
+<div class="">
+<h2 class="text-2xl font-bold">Eager ( <i class="fa-solid fa-microphone-lines"></i>    :ইগার)</h2>
+</div>
+
+<div class="">
+<h2 class="font-bold">Meaning</h2>
+<p class="font-bangla">আগ্রহী</p>
+</div>
+
+
+<div class="">
+<h2 class="font-bold">Example</h2>
+<p class="">Lorem ipsum dolor sit amet.</p>
+</div>
+
+
+<div class="">
+<h2 class="font-bold">Synonyms</h2>
+<span class="btn">Synonyms - 1</span>
+<span class="btn">Synonyms - 1</span>
+<span class="btn">Synonyms - 1</span>
+</div>
+
+
+`;
 
 document.getElementById('word_modal').showModal();
 }
