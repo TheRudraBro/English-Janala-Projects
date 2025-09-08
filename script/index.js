@@ -127,22 +127,24 @@ wordContainer.innerHTML=
 
 // }
 words.forEach(word =>{
-    console.log(word);
+    // console.log(word);
     const card= document.createElement('div');
     card.innerHTML=`
     <div class="bg-white rounded-xl shadow-sm text-center py-20 px-5 space-y-4">
-<h2 class="font-bold text-xl">${word.word ? word.word :'শব্দ পাওয়া যায়নি।'}</h2>
+<h2 class="font-bold text-xl sm:text-2xl">${word.word ? word.word :'শব্দ পাওয়া যায়নি।'}</h2>
 <p class="font-semibold ">Meaning / Pronounciation</p>
-<div class="font-bangla text-xl font-medium">"${word.meaning ? word.meaning : 'অর্থ পাওয়া যায়নি।'} / ${word.pronunciation? word.pronunciation : 'Pronunciation পাওয়া যায়নি।'}"</div>
-<div class="flex justify-between items-center mt-5">
-    <button onclick="LoadWordDetail(${word.id})" class="btn btn-outline btn-primary"><i class="fa-solid fa-circle-info"></i></button>
-    <button onclick="pronounceWord('${word.word}')" class="btn btn-outline btn-secondary"><i class="fa-solid fa-volume-high"></i></button>
+<div class="font-bangla text-lg sm:text-xl font-medium break-words">"${word.meaning ? word.meaning : 'অর্থ পাওয়া যায়নি।'} / ${word.pronunciation? word.pronunciation : 'Pronunciation পাওয়া যায়নি।'}"</div>
+<div class="flex flex-col sm:flex-row justify-between items-center mt-5 gap-2">
+    <button onclick="LoadWordDetail(${word.id})" class="btn btn-outline btn-primary w-full sm:w-auto"><i class="fa-solid fa-circle-info"></i></button>
+    <button onclick="pronounceWord('${word.word}')" class="btn btn-outline btn-secondary w-full sm:w-auto"><i class="fa-solid fa-volume-high"></i></button>
 </div>
 </div>
     `;
 
     wordContainer.append(card);
 })
+ wordContainer.className = 'bg-gray-100 p-5 w-11/12 mx-auto my-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5';
+
 manageSpinner(false);
 }
 const displayLessons=lessons=>{
