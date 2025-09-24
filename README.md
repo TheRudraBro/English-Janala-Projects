@@ -1,1 +1,1 @@
-Live Link : https://therudrabro.github.io/English-Janala-Projects/
+Explore Web : https://english-vocabularies-learning-janala.netlify.app/
